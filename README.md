@@ -14,7 +14,7 @@ cards trading above or below fundamentals. Also computes expected value per seal
 set. A daily GitHub Actions pipeline pulls from open APIs, accrues its own market
 history, and redeploys the site.
 
-Python, scikit-learn, GitHub Actions, Netlify.
+Python, NumPy (the ridge fit is hand-rolled, not scikit-learn), GitHub Actions, Netlify.
 
 ### [Instantly-Reply-Bot](https://github.com/Raz-Gits/Instantly-Reply-Bot)
 
@@ -24,7 +24,7 @@ never reach the model. Unsubscribes process automatically through the sending
 platform's API, anything needing a person routes to a channel with full context, and
 a human approves every outgoing send. Dockerised, CI on every push, 59 tests.
 
-TypeScript, Fastify, OpenAI, Vitest, Railway.
+TypeScript, Fastify, OpenAI, Zod, Vitest, Railway.
 
 ## What I spend most of my time on
 
