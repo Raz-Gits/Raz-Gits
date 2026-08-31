@@ -4,7 +4,20 @@ I build the systems behind marketing and sales: lead pipelines, email infrastruc
 CRM integrations, and the automation that has to keep working when nobody is watching it.
 
 Most of what I build runs in production for a small number of businesses rather than
-in the open, so a lot of my repositories here are private. Three that are not:
+in the open, so a lot of my repositories here are private. Four that are not:
+
+### [claude-seo-skill](https://github.com/Raz-Gits/claude-seo-skill)
+
+SEO audits that run on measured evidence rather than on what a model believes about
+SEO. Thirty-three scripts hit the actual page, headers, sitemap and schema; ten
+subagents run in parallel over their own domains; and a final verifier deduplicates
+to root cause, drops anything measurement contradicts, and blocks environment
+artefacts from being reported as site defects. Forty findings feel thorough and are
+usually worse than six, because a reader who finds three wrong items stops trusting
+the rest. GitHub repository SEO is its own lane, since repos rank and READMEs are
+landing pages.
+
+Python, standard library only. No pip install, no browser, no required API keys.
 
 ### [claude-code-skills](https://github.com/Raz-Gits/claude-code-skills)
 
