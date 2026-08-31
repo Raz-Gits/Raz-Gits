@@ -4,7 +4,20 @@ I build the systems behind marketing and sales: lead pipelines, email infrastruc
 CRM integrations, and the automation that has to keep working when nobody is watching it.
 
 Most of what I build runs in production for a small number of businesses rather than
-in the open, so a lot of my repositories here are private. Two that are not:
+in the open, so a lot of my repositories here are private. Three that are not:
+
+### [claude-code-skills](https://github.com/Raz-Gits/claude-code-skills)
+
+Skills and a subagent for Claude Code, built around the idea that an agent is most
+useful when it is willing to tell you something you did not want to hear. `grill-me`
+interrogates a claim three levels deep instead of stopping at the rehearsed first
+answer, and returns a verdict per claim rather than a list of questions.
+`blast-radius` asks what a change touches before anyone notices, which is the
+question that actually predicts incidents. `integration-forensics` is the catalogue
+of ways a third-party API lies to you. `memory` borrows the bi-temporal model from
+temporal knowledge graphs so a stored fact can expire instead of quietly going stale.
+
+Markdown, an installer, no dependencies. MIT.
 
 ### [poke-research](https://github.com/Raz-Gits/poke-research)
 
