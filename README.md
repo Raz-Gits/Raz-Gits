@@ -4,7 +4,20 @@ I build the systems behind marketing and sales: lead pipelines, email infrastruc
 CRM integrations, and the automation that has to keep working when nobody is watching it.
 
 Most of what I build runs in production for a small number of businesses rather than
-in the open, so a lot of my repositories here are private. Four that are not:
+in the open, so a lot of my repositories here are private. Five that are not:
+
+### [outbound-pipeline](https://github.com/Raz-Gits/outbound-pipeline)
+
+The enrichment and delivery half of my outbound engine, extracted and made
+source-agnostic: a CSV of leads goes in, verified emails come out, and shipping to
+the sequencer is report-only unless three separate gates agree. Providers run
+cheapest first, from SMTP-verified pattern guessing through four free-quota finders
+to paid lookups behind explicit spend gates with hard monthly caps that fail closed
+on a corrupt ledger. The do-not-contact list is append-only plain text, checked at
+ship time rather than run start, because people opt out mid-run.
+
+Python, one dependency. The README's "parts that took the longest to learn" section
+is the honest changelog of what production taught me.
 
 ### [claude-seo-skill](https://github.com/Raz-Gits/claude-seo-skill)
 
