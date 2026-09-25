@@ -22,15 +22,20 @@ is the honest changelog of what production taught me.
 ### [claude-seo-skill](https://github.com/Raz-Gits/claude-seo-skill)
 
 SEO audits that run on measured evidence rather than on what a model believes about
-SEO. Thirty-three scripts hit the actual page, headers, sitemap and schema; ten
-subagents run in parallel over their own domains; and a final verifier deduplicates
+SEO. Thirty-three scripts hit the actual page, headers, sitemap and schema; nine
+specialist subagents run in parallel over their own domains; and a final verifier deduplicates
 to root cause, drops anything measurement contradicts, and blocks environment
 artefacts from being reported as site defects. Forty findings feel thorough and are
 usually worse than six, because a reader who finds three wrong items stops trusting
 the rest. GitHub repository SEO is its own lane, since repos rank and READMEs are
 landing pages.
 
-Python, standard library only. No pip install, no browser, no required API keys.
+Python. The GitHub scripts and the verifier use only the standard library; the website
+checks need `requests` and `beautifulsoup4`, and the visual checks need Playwright. No
+required API keys. The skill comes from
+[Bhanunamikaze/Agentic-SEO-Skill](https://github.com/Bhanunamikaze/Agentic-SEO-Skill),
+which builds on [AgriciDaniel/claude-seo](https://github.com/AgriciDaniel/claude-seo),
+both MIT.
 
 ### [claude-code-skills](https://github.com/Raz-Gits/claude-code-skills)
 
