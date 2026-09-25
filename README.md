@@ -42,6 +42,7 @@ answer, and returns a verdict per claim rather than a list of questions.
 question that actually predicts incidents. `integration-forensics` is the catalogue
 of ways a third-party API lies to you. `memory` borrows the bi-temporal model from
 temporal knowledge graphs so a stored fact can expire instead of quietly going stale.
+`voice` learns how you write from your corrections.
 
 Markdown, an installer, no dependencies. MIT.
 
@@ -61,16 +62,17 @@ Reply triage for cold-email campaigns. A webhook classifies every inbound reply 
 OpenAI structured outputs, with deterministic rules running first so the obvious cases
 never reach the model. Unsubscribes process automatically through the sending
 platform's API, anything needing a person routes to a channel with full context, and
-a human approves every outgoing send. Dockerised, CI on every push, 59 tests.
+the public version drafts for a human to send; in production the defined cases replied
+automatically. Dockerised, CI on every push, 59 tests.
 
 TypeScript, Fastify, OpenAI, Zod, Vitest, Railway.
 
 ## What I spend most of my time on
 
 **Outbound infrastructure.** Scrapers feeding an eight-provider enrichment and
-verification waterfall, self-hosted n8n handling delivery across three client
-workspaces, and every send, reply and bounce logged so the data decides which
-campaigns keep running. Moving to verified-only sending took bounce rates from double
+verification waterfall. Self-hosted n8n handled delivery across three client
+workspaces, with every send, reply and bounce logged so the data decided which
+campaigns kept running. Moving to verified-only sending took bounce rates from double
 digits down to under one percent.
 
 **Web and lead systems** for an interstate moving company: a React and TypeScript site
