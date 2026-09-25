@@ -4,7 +4,8 @@ I build the systems behind marketing and sales: lead pipelines, email infrastruc
 CRM integrations, and the automation that has to keep working when nobody is watching it.
 
 Most of what I build runs in production for a small number of businesses rather than
-in the open, so a lot of my repositories here are private. Five that are not:
+in the open, so a lot of my repositories here are private. Four that are not, plus a
+skill I packaged:
 
 ### [outbound-pipeline](https://github.com/Raz-Gits/outbound-pipeline)
 
@@ -18,24 +19,6 @@ ship time rather than run start, because people opt out mid-run.
 
 Python, one dependency. The README's "parts that took the longest to learn" section
 is the honest changelog of what production taught me.
-
-### [claude-seo-skill](https://github.com/Raz-Gits/claude-seo-skill)
-
-SEO audits that run on measured evidence rather than on what a model believes about
-SEO. Thirty-three scripts hit the actual page, headers, sitemap and schema; nine
-specialist subagents run in parallel over their own domains; and a final verifier deduplicates
-to root cause, drops anything measurement contradicts, and blocks environment
-artefacts from being reported as site defects. Forty findings feel thorough and are
-usually worse than six, because a reader who finds three wrong items stops trusting
-the rest. GitHub repository SEO is its own lane, since repos rank and READMEs are
-landing pages.
-
-Python. The GitHub scripts and the verifier use only the standard library; the website
-checks need `requests` and `beautifulsoup4`, and the visual checks need Playwright. No
-required API keys. The skill comes from
-[Bhanunamikaze/Agentic-SEO-Skill](https://github.com/Bhanunamikaze/Agentic-SEO-Skill),
-which builds on [AgriciDaniel/claude-seo](https://github.com/AgriciDaniel/claude-seo),
-both MIT.
 
 ### [claude-code-skills](https://github.com/Raz-Gits/claude-code-skills)
 
@@ -71,6 +54,21 @@ the public version drafts for a human to send; in production the defined cases r
 automatically. Dockerised, CI on every push, 59 tests.
 
 TypeScript, Fastify, OpenAI, Zod, Vitest, Railway.
+
+### [claude-seo-skill](https://github.com/Raz-Gits/claude-seo-skill)
+
+A Claude Code SEO audit skill that I packaged and use. The skill is
+[Bhanunamikaze/Agentic-SEO-Skill](https://github.com/Bhanunamikaze/Agentic-SEO-Skill),
+which builds on [AgriciDaniel/claude-seo](https://github.com/AgriciDaniel/claude-seo),
+both MIT, included unchanged; my part is the packaging and the README. Thirty-three
+scripts check the actual page, headers, sitemap and schema; nine specialist subagents
+run in parallel over their own domains; and a final verifier removes duplicates and
+anything a measurement contradicts before the report is written. GitHub repository
+SEO is its own lane.
+
+Python. The GitHub scripts and the verifier use only the standard library; the website
+checks need `requests` and `beautifulsoup4`, and the visual checks need Playwright. No
+required API keys.
 
 ## What I spend most of my time on
 
