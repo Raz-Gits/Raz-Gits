@@ -4,7 +4,7 @@ I build the systems behind marketing and sales: lead pipelines, email infrastruc
 CRM integrations, and the automation that has to keep working when nobody is watching it.
 
 Most of what I build runs in production for a small number of businesses rather than
-in the open, so a lot of my repositories here are private. Four that are not, plus a
+in the open, so a lot of my repositories here are private. Six that are not, plus a
 skill I packaged:
 
 ### [outbound-pipeline](https://github.com/Raz-Gits/outbound-pipeline)
@@ -19,6 +19,17 @@ ship time rather than run start, because people opt out mid-run.
 
 Python, one dependency. The README's "parts that took the longest to learn" section
 is the honest changelog of what production taught me.
+
+### [n8n-workflows](https://github.com/Raz-Gits/n8n-workflows)
+
+n8n work, exported and cleaned for sharing. The first is a hiring-signal pipeline. A
+company posting its first SDR job is about to build outbound from nothing, so the
+workflow finds those postings, asks Apollo how many SDRs are already there, finds a
+decision maker through an Apollo, Hunter and Snov cascade, verifies the address, has
+GPT write three openers from the company's own site, and routes first-SDR companies to
+their own Instantly campaign.
+
+n8n, JavaScript, PostgreSQL, Apollo, Hunter, Snov, OpenAI, Instantly.
 
 ### [claude-code-skills](https://github.com/Raz-Gits/claude-code-skills)
 
@@ -54,6 +65,16 @@ the public version drafts for a human to send; in production the defined cases r
 automatically. Dockerised, CI on every push, 59 tests.
 
 TypeScript, Fastify, OpenAI, Zod, Vitest, Railway.
+
+### [dev-sync](https://github.com/Raz-Gits/dev-sync)
+
+How I move work between a Mac and a Windows PC. One command parks everything, including
+half-finished work, and pushes; one command on the other machine puts it back exactly as
+it was. Secrets travel encrypted with sops and age, with each machine holding its own
+private key, and a read-only monitor flags any repo with an unsealed or stale secret.
+Packaged as Claude Code skills.
+
+Bash, sops, age, Git.
 
 ### [claude-seo-skill](https://github.com/Raz-Gits/claude-seo-skill)
 
